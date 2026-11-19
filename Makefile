@@ -13,7 +13,7 @@ install: venv
 	$(PIP) install -r requirements.txt
 
 run:
-	$(VENV)/bin/uvicorn app.main:app --app-dir backend --reload
+	$(VENV)/bin/uvicorn app.main:app --app-dir backend --reload --host 0.0.0.0
 
 test:
 	$(PY) -m pytest
